@@ -1,0 +1,6 @@
+{
+    "package-name": "js-counters",
+    "installed-apps": [
+        "js_counters"
+    ]
+}

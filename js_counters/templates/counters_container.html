@@ -1,0 +1,34 @@
+{% load thumbnail sekizai_tags cms_tags %}
+
+<div class="number-counters" style="background-position: 50% 43px;{% if object.bg_image %} background-image:url({{ object.bg_image.url }});{% endif %}">
+  <div class="container">
+
+    {% if object.title or object.summary %}
+
+      <header class="sec-heading">
+        {% if object.title %}<h2 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeIn;">{{ object.title }}</h2>{% endif %}
+        {% if object.summary %}<p class="subheading">{{ object.summary }}</p>{% endif %}
+      </header>
+
+    {% endif %}
+
+    <div id="counters" class="row count-wrapper">
+
+      {% for plugin in object.child_plugin_instances %}
+          {% render_plugin plugin %}
+      {% endfor %}
+
+    </div><!-- / .row -->
+
+    {% if object.button_link and object.button_text %}
+
+      <div class="row text-center mb-50">
+        <div class="col-sm-12">
+          <a href="{{ object.button_link }}" class="btn btn-light wow fadeIn" data-wow-duration="2s" data-wow-delay="1s" style="visibility: visible; animation-duration: 2s; animation-delay: 1s; animation-name: fadeIn;">{{ object.button_text }}</a>
+        </div>
+      </div><!-- / .row -->
+
+    {% endif %}
+
+  </div><!-- / .container -->
+</div>

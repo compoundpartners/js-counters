@@ -1,0 +1,6 @@
+{% load thumbnail sekizai_tags cms_tags %}
+
+<div class="col-md-3 mb-sm-100 count-item wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeIn;">
+  <span id="count-{{ object.get_position_in_placeholder }}" class="count-nbr" data-final-count="{{ object.counter_value }}">0</span>
+  <span class="count-text">{{ object.counter_text }}</span>
+</div>
