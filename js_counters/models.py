@@ -41,7 +41,7 @@ class CounterModel(CMSPlugin):
     counter_text = models.CharField(max_length=255, blank=True, null=True)
     counter_value = models.CharField(max_length=255, blank=True, null=True)
     icon = Icon(blank=False, default='fa-')
-    image = FilerImageField(null=True, blank=True, related_name="title_image")
+    image = FilerImageField(null=True, blank=True, related_name="conter_image")
 
     def __unicode__(self):
         return self.counter_text or 'counter'
