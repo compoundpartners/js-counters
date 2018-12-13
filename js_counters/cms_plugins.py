@@ -12,7 +12,7 @@ class CountersContainerPlugin(CMSPluginBase):
     name = _('Counters Container')
     child_classes = ['CounterPlugin']
 
-    render_template = 'counters_container.html'
+    render_template = 'js-counters/counters_container.html'
 
     allow_children = True
 
@@ -32,9 +32,9 @@ class CounterPlugin(CMSPluginBase):
     name = _('Counter')
     parent_classes = ['CountersContainerPlugin']
 
-    render_template = 'counter.html'
+    render_template = 'js-counters/counter.html'
 
-    #child_count = CountersContainerPlugin.get(cmsplugin_ptr=instance.parent.child_count) 
+    #child_count = CountersContainerPlugin.get(cmsplugin_ptr=instance.parent.child_count)
 
     def render(self, context, instance, placeholder):
         context.update({
