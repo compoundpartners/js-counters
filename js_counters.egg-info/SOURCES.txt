@@ -13,11 +13,13 @@ js_counters.egg-info/PKG-INFO
 js_counters.egg-info/SOURCES.txt
 js_counters.egg-info/dependency_links.txt
 js_counters.egg-info/not-zip-safe
+js_counters.egg-info/requires.txt
 js_counters.egg-info/top_level.txt
 js_counters/migrations/0001_initial.py
 js_counters/migrations/0002_auto_20180206_0609.py
 js_counters/migrations/0003_auto_20180209_0727.py
 js_counters/migrations/0004_auto_20180209_0736.py
+js_counters/migrations/0005_auto_20181212_1729.py
 js_counters/migrations/__init__.py
-js_counters/templates/counter.html
-js_counters/templates/counters_container.html
+js_counters/templates/js-counters/counter.html
+js_counters/templates/js-counters/counters_container.html
